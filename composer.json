@@ -1,0 +1,52 @@
+{
+    "name": "chelout/laravel-yandex-message-queue",
+    "description": "Yandex Message Queue connector",
+    "keywords": [
+        "laravel",
+        "yandex message queue"
+    ],
+    "homepage": "https://github.com/chelout/laravel-yandex-message-queue",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Viacheslav Ostrovskiy",
+            "email": "chelout@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "^6.0|^7.0|^8.0",
+        "illuminate/queue": "^6.0|^7.0|^8.0",
+        "illuminate/bus": "^6.0|^7.0|^8.0",
+        "aws/aws-sdk-php": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.3|^9.0|^9.3",
+        "orchestra/testbench": "^4.0|^5.0|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chelout\\Ymq\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Chelout\\Ymq\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chelout\\Ymq\\YmqServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
